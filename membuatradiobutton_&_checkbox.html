@@ -18,6 +18,14 @@
             </tr>
 
             <tr>
+                <td><label for="jenkel">Jenis Kelamin</label></td>
+                <td>
+                    <input type="checkbox" name="jenkel" id="jenkel" value="pria" checked><label for="">Pria</label>
+                    <input type="checkbox" name="jenkel" id="jenkel" value="wanita"><label for="">Wanita</label>
+                </td>
+            </tr>
+
+            <tr>
                 <td><label for="emailku">Email</label></td>
                 <td><input type="email" id="emailku" placeholder="masukkan email" name="emailku"></td>
             </tr>
@@ -42,22 +50,40 @@
             </tr>
             
         </form>
-    </table>
-    <hr><hr>
+    </table><br>
 
-    <p>Perbedaan method get dan post</p>
-    <div>
-        <p>method post</p>
-        <p>jika kamu menukar data method tipe post, maka akan memunculkan link sebagai berikut</p>
-        <p>file:///D:/daftar?nama=marino&emailku=ade.zevi61%40gmail.com&pss=1231&nob=232&wrn=%23000000</p>
-        <p>kesimpulan method dengan tipe post akan memunculkan data yang dikirim tadi: nama,emailku,pss,nob dan wrn adalah nama di tag name</p>
-        <br>
-        <p>method get</p>
-        <p>jika kamu menukar data method tipe get, maka akan memunculkan link sebagai berikut</p>
-        <p>file:///D:/daftar</p>
-        <p>kesimpulannya adalah jika method bertipe get, maka data yang dikirim tidak dimunculkan pada data link</p>
-        <p>namun, ketika kita melakukan inspect maka data yang bertipe get tadi masih ada dan tertampung</p>
-        <p>jadi,alangkah baiknya untuk data yang bersifat rahasia lebih baik menggunakan post, namun untuk proses pencarian data bisa menggunakan method get</p>
-    </div>
+    ket: checkbox : kita bisa memilih lebih dari satu
+
+    <table>
+        <h1>pesanan</h1>
+        <form action="/order">
+            <tr>
+                <td><label for="baju">Baju </label></td>
+                <td>:</td>
+                <td>
+                    <input type="radio" name="baju" id="" value="kemeja" checked><label for="">Kemeja</label>
+                    <input type="radio" name="baju" id="" value="kaos"><label for="">Kaos</label>
+                </td> 
+            </tr>
+
+            <tr>
+                <td><label for="celana">Celana</label></td>
+                <td>:</td>
+                <td>
+                    <select name="celana" id="celana">
+                        <option value="">==Silahkan Pilih==</option>
+                        <option value="j">Jeans</option>
+                        <option value="l" selected>Levi's</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td><button type="submit">order</button></td>
+            </tr>
+
+        </form>
+    </table>
+
 </body>
 </html>
